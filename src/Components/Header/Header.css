@@ -1,0 +1,409 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  max-height: 90px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(24, 23, 28, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(24, 23, 28, 0.25);
+  z-index: 100;
+  padding: 20px;
+}
+.nav .logo {
+  color: var(--white);
+  font-size: 2rem;
+  font-family: "Unbounded", cursive;
+  font-weight: 500;
+  cursor: pointer;
+  /* border: 1px dashed red; */
+}
+
+.logo span {
+  color: var(--blue);
+}
+
+.nav-links {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  /* flex-direction: row; */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav li {
+  list-style-type: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav li:hover {
+  background-color: var(--blue);
+  border-radius: 20px;
+  color: #000;
+}
+
+.contact-me-btn {
+  color: var(--white);
+}
+
+.contact-me-btn button {
+  border: none;
+  background-color: var(--blue);
+  border-radius: 30px;
+  padding: 15px 30px;
+  color: var(--black);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: rgba(2, 20, 36, 0.48) 6px 2px 16px 0px,
+    rgba(5, 117, 106, 0.8) -6px -2px 16px 0px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.contact-me-btn button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  margin: 0;
+}
+
+.burger-btn {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.stick1,
+.stick2,
+.stick3 {
+  min-height: 5px;
+  border-radius: 5px;
+  min-width: 100%;
+  margin: 5px 0px;
+  background-color: white;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+}
+
+/* Laptop */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Your CSS styles for tablet here */
+  .burger {
+    /* display: block; */
+    width: 50%;
+    order: 2;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: red; */
+  }
+
+  .nav {
+    padding: 20px 30px;
+    background-color: #18171c;
+    display: flex;
+    height: 50px;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    /* background-color: red; */
+  }
+
+  .logo {
+    width: 50%;
+    order: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav-links {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    order: 3;
+    width: 100%;
+    top: 100%;
+    position: absolute;
+    background: rgba(24, 23, 28);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(24, 23, 28, 0.25);
+
+    /* Add transition properties */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+    /* display: none; */
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-me-btn {
+    display: none;
+  }
+
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .burger-btn-show {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .burger-btn-show .stick1,
+  .burger-btn-show .stick2 {
+    position: absolute;
+    top: 30%;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(45deg);
+  }
+
+  .burger-btn-show .stick3 {
+    position: absolute;
+    top: 30%;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-45deg);
+  }
+
+  .burger-btn .stick1,
+  .burger-btn .stick2 {
+    position: relative;
+    /* top: 50%; */
+    transition: all 0.5s ease-in-out;
+    transform: rotate(0deg);
+  }
+
+  .burger-btn .stick3 {
+    position: relative;
+    /* top: 50%; */
+    transition: all 0.5s ease-in-out;
+    transform: rotate(0deg);
+  }
+
+  .nav-links.show {
+    max-height: 200px; /* Adjust the height as per your requirement */
+    transition: max-height 0.3s ease-in;
+    animation: dropdownAnimation 0.3s forwards;
+  }
+
+  @keyframes dropdownAnimation {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: auto; /* Adjust the height as per your requirement */
+      opacity: 1;
+    }
+  }
+}
+
+/* Phone */
+@media only screen and (max-width: 767px) {
+  /* Your CSS styles for phone here */
+  html {
+    font-size: 0.4rem;
+  }
+
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    width: 30px !important;
+    height: 30px !important;
+    transition: all 0.2s ease-in-out;
+    /* background-color: red; */
+  }
+
+  .stick1,
+  .stick2,
+  .stick3 {
+    min-height: 4px;
+    border-radius: 5px;
+    min-width: 100%;
+    margin: 2px 0px;
+    background-color: white;
+  }
+
+  .burger {
+    /* display: block; */
+    width: 50%;
+    order: 2;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: red; */
+  }
+
+  .nav {
+    padding: 15px 30px;
+    background-color: #18171c;
+    display: flex;
+    height: min-content;
+    height: 40px;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    /* background-color: red; */
+  }
+
+  .logo {
+    width: 50%;
+    order: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav-links {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    order: 3;
+    width: 100%;
+    top: 100%;
+    position: absolute;
+    background: rgba(24, 23, 28);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(24, 23, 28, 0.25);
+
+    /* Add transition properties */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+    /* display: none; */
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-me-btn {
+    display: none;
+  }
+
+  .burger-btn-show {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .burger-btn-show .stick1,
+  .burger-btn-show .stick2 {
+    position: absolute;
+    top: 30%;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(45deg);
+  }
+
+  .burger-btn-show .stick3 {
+    position: absolute;
+    top: 30%;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-45deg);
+  }
+
+  .burger-btn .stick1,
+  .burger-btn .stick2 {
+    position: relative;
+    /* top: 50%; */
+    transition: all 0.5s ease-in-out;
+    transform: rotate(0deg);
+  }
+
+  .burger-btn .stick3 {
+    position: relative;
+    /* top: 50%; */
+    transition: all 0.5s ease-in-out;
+    transform: rotate(0deg);
+  }
+
+  .nav-links.show {
+    max-height: 200px; /* Adjust the height as per your requirement */
+    transition: max-height 0.3s ease-in;
+    animation: dropdownAnimation 0.3s forwards;
+  }
+
+  @keyframes dropdownAnimation {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: auto; /* Adjust the height as per your requirement */
+      opacity: 1;
+    }
+  }
+}

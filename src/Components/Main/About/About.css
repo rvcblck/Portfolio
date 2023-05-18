@@ -1,0 +1,302 @@
+.about-me {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: var(--green);
+  /* padding-bottom: 100px; */
+}
+
+.about-me-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.about-me-left .img-container {
+  position: relative;
+  width: 100%;
+  min-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* aspect-ratio: 9/16; */
+}
+
+.about-me-left .img-container img {
+  position: absolute;
+  z-index: 3;
+  width: 50%;
+  /* min-height: 100%; */
+  display: flex;
+  align-items: center;
+  clip-path: polygon(34.2% 0%, 100% 0%, 70% 100%, 0% 99.5%);
+  border-radius: 50%;
+}
+
+.about-me-left .img-container img:hover {
+  transform: scale(1.1);
+}
+
+.img-circle {
+  /* padding: 2px; */
+  position: absolute;
+  z-index: 2;
+  min-width: 50%;
+  min-height: 80%;
+  border: 5px solid var(--skyblue);
+  border-radius: 50%;
+  background-color: var(--darker);
+
+  /* filter: blur(10px); */
+}
+
+.img-circle2 {
+  /* padding: 2px; */
+  position: absolute;
+  z-index: 1;
+  min-width: 50%;
+  min-height: 100%;
+  border: none;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  background-color: var(--blue);
+  filter: blur(50px);
+
+  /* filter: blur(10px); */
+}
+
+.about-me-right {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--darker);
+  z-index: 10;
+  padding-bottom: 100px;
+}
+
+.about-me-wrapper {
+  margin-top: 100px;
+  width: 80%;
+  align-self: center;
+}
+
+.about-me-right h1 {
+  /* width: 80%; */
+  display: flex;
+  align-self: center;
+  color: var(--white);
+}
+
+.about-me-right p {
+  color: var(--white);
+  line-height: 2rem;
+  margin-bottom: 100px;
+  letter-spacing: 2px;
+}
+
+.about-me-right span {
+  min-width: 100px;
+  background-color: var(--blue);
+  min-height: 5px;
+  max-height: 5px;
+  display: flex;
+  align-self: center;
+  margin-left: 20px;
+  filter: blur(5px);
+}
+
+.about-me-right h2 {
+  color: var(--white);
+}
+
+.school {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  border: 2px dashed blue;
+}
+
+.edu-bg {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.edu-bg-icon {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px dashed red; */
+}
+
+.edu-bg-icon img {
+  width: 60%;
+  /* border: 1px dashed green; */
+  border-radius: 50%;
+}
+
+.edu-bg-info {
+  color: white;
+}
+
+.edu-bg-info div {
+  line-height: 40px;
+}
+
+@media only screen and (min-width: 1200px) {
+  /* Your CSS styles for desktop here */
+  .img-container-mobile {
+    display: none;
+  }
+}
+
+/* Laptop */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Your CSS styles for laptop here */
+  .img-container-mobile {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Your CSS styles for tablet here */
+  .about-me {
+    flex-direction: column-reverse;
+    background-color: var(--darker);
+  }
+
+  .about-me-right {
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+
+  .about-me-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .about-me-wrapper h1 {
+    width: 100%;
+  }
+
+  .about-me-wrapper h2 {
+    font-size: 2rem;
+  }
+
+  .about-me-wrapper hr {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--blue);
+  }
+
+  .about-me-wrapper p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .about-me-left {
+    display: none;
+  }
+
+  .img-container-mobile {
+    display: block;
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    /* aspect-ratio: 9/16; */
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 20px 0px;
+  }
+
+  .img-container-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+  .edu-bg {
+    font-size: 1.5rem;
+  }
+}
+
+/* Phone */
+@media only screen and (max-width: 767px) {
+  /* Your CSS styles for phone here */
+  .about-me {
+    flex-direction: column-reverse;
+    background-color: var(--darker);
+  }
+
+  .about-me-right {
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+
+  .about-me-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .about-me-wrapper h1 {
+    width: 100%;
+  }
+
+  .about-me-wrapper h2 {
+    font-size: 2rem;
+  }
+
+  .about-me-wrapper hr {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--blue);
+  }
+
+  .about-me-wrapper p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .about-me-left {
+    display: none;
+  }
+
+  .img-container-mobile {
+    display: block;
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    /* aspect-ratio: 9/16; */
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 20px 0px;
+  }
+
+  .img-container-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+  .edu-bg {
+    font-size: 1.5rem;
+  }
+}
