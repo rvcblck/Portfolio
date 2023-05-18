@@ -2,8 +2,6 @@ import "./List.css";
 import React, { useState } from "react";
 
 export default function List(props) {
-  console.log(props.projects);
-
   const list = props.projects.images.map((item) => {
     return (
       <div className="cards" key={item.id}>
