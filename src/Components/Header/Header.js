@@ -46,7 +46,9 @@ export default function Header() {
         </ul>
       </div>
       <div className="contact-me-btn">
-        <button>Contact Me</button>
+        <a href="mailto:deleon.rovic.g.5570@gmail.com">
+          <button>Contact Me</button>
+        </a>
       </div>
       <div className="burger">
         <div

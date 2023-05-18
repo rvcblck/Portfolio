@@ -39,24 +39,32 @@ export default function Home() {
         <div className="links">
           <ul>
             <li>
-              <button>
-                <i className="fa-solid fa-envelope"></i>
-              </button>
+              <a href="mailto:deleon.rovic.g.5570@gmail.com">
+                <button>
+                  <i className="fa-solid fa-envelope"></i>
+                </button>
+              </a>
             </li>
             <li>
-              <button>
-                <i className="fa-brands fa-linkedin-in"></i>
-              </button>
+              <a href="https://www.linkedin.com/in/rovic-de-leon-8980a4261">
+                <button>
+                  <i className="fa-brands fa-linkedin-in"></i>
+                </button>
+              </a>
             </li>
             <li>
-              <button>
-                <i className="fa-brands fa-facebook-f"></i>
-              </button>
+              <a href="https://www.facebook.com/rovic.killua16">
+                <button>
+                  <i className="fa-brands fa-facebook-f"></i>
+                </button>
+              </a>
             </li>
             <li>
-              <button>
-                <i className="fa-brands fa-github"></i>
-              </button>
+              <a href="https://github.com/rvcblck">
+                <button>
+                  <i className="fa-brands fa-github"></i>
+                </button>
+              </a>
             </li>
           </ul>
         </div>
