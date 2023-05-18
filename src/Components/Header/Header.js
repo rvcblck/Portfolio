@@ -43,11 +43,14 @@ export default function Header() {
           <li onClick={scrollToSkill}>Skills</li>
           <li onClick={scrollToProjects}>Projects</li>
           <li onClick={scrollToAbout}>About Me</li>
+          
         </ul>
       </div>
       <div className="contact-me-btn">
-        <a href="mailto:deleon.rovic.g.5570@gmail.com">
-          <button>Contact Me</button>
+        <a href="./resume/resume.docx" download>
+          <button className="resume">
+            <i class="fa-solid fa-circle-down"></i> <span>Resume</span>
+          </button>
         </a>
       </div>
       <div className="burger">

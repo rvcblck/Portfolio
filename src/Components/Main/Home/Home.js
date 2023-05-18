@@ -23,6 +23,14 @@ export default function Home() {
           As a dedicated and passionate web developer, I possess the necessary
           skills and expertise to ensure the success of your project.
         </span>
+
+        <div className="resume-mobile">
+          <a href="./resume/resume.docx" download>
+            <button className="resume">
+              <i className="fa-solid fa-circle-down"></i> <span>Resume</span>
+            </button>
+          </a>
+        </div>
         <div className="home-links">
           <button onClick={scrollToAbout} className="home-about-me">
             About Me

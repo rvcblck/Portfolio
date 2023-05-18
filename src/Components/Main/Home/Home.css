@@ -100,6 +100,10 @@
   font-weight: 200;
 }
 
+.home-left .button {
+  width: min-content;
+}
+
 .home-right {
   position: relative;
   margin: 0;
@@ -239,6 +243,36 @@
     font-size: 0.7rem;
   }
 
+  .resume-mobile {
+    margin-top: 20px;
+    display: block;
+    width: 70%;
+    display: flex;
+    align-self: center;
+  }
+
+  .resume-mobile .resume {
+    white-space: nowrap;
+    width: min-content;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .resume-mobile .resume i {
+    font-size: 2.5rem;
+  }
+
+  .resume-mobile .resume span {
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+  }
+
+  .resume:hover span {
+    color: #e8e8e8;
+  }
+
   .home-left span {
     font-size: 2rem;
     line-height: 5rem;
@@ -306,6 +340,33 @@
   /* Your CSS styles for phone here */
   html {
     font-size: 0.5rem;
+  }
+
+  .resume-mobile {
+    margin-top: 20px;
+    display: block;
+    width: 70%;
+    display: flex;
+    align-self: center;
+  }
+
+  .resume-mobile .resume {
+    white-space: nowrap;
+    width: min-content;
+  }
+
+  .resume-mobile .resume i {
+    font-size: 2.5rem;
+  }
+
+  .resume-mobile .resume span {
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+  }
+
+  .resume:hover span {
+    color: #e8e8e8;
   }
 
   .home-left span {
